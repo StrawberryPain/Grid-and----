@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "TT Lakes";
+}
+
+.header {
+  &__list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    margin: 20px 10px;
+  }
+
+  &__list-item-second {
+    padding-right: 20px;
+    position: relative;
+  }
+
+  &__list-item-second::after {
+    content: "";
+    background: #EAEAEA;
+    width: 2px;
+    height: 35px;
+    left: 125px;
+    border-radius: 1px;
+    position: absolute;
+    margin-top: 3px;
+  }
+
+  &__list-item-third {
+    display: none;
+  }
+
+  &__list-item-four {
+    display: none;
+  }
+
+  &__list-item-five {
+    display: none;
+  }
+}
+
+.content {
+  &__main-item {
+    font-size: 28px;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  &__main-item::before {
+    content: "";
+    position: absolute;
+    background: #41F6D7;
+    width: 4px;
+    height: 40px;
+    left: 0;
+  }
+
+  &__item {
+  display: none;
+  }
+  &__image {
+    display: none;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  // планшет
+}
+
+@media (min-width: 1120px) {
+  // пк
+}
