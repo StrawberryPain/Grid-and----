@@ -6,11 +6,11 @@
 
 body {
   font-family: "TT Lakes";
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
 }
 
 .header {
-  border-bottom: 1px solid #D9FFF5;
+  border-bottom: 1px solid #d9fff5;
   background-color: #fff;
 }
 .header__list {
@@ -28,7 +28,7 @@ body {
 }
 .header__list-item-second::after {
   content: "";
-  background: #EAEAEA;
+  background: #eaeaea;
   width: 2px;
   height: 35px;
   left: 125px;
@@ -57,7 +57,7 @@ body {
 .content__main-item::before {
   content: "";
   position: absolute;
-  background: #41F6D7;
+  background: #41f6d7;
   width: 4px;
   height: 40px;
   left: 0;
@@ -69,27 +69,80 @@ body {
   display: none;
 }
 
-.site-navigation__list {
+.site-navigation {
   padding-left: 16px;
   margin: 24px 0;
+}
+.site-navigation__list {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  color: #7E7E82;
+  color: #7e7e82;
   white-space: nowrap;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   font-size: 16px;
 }
 .site-navigation__list::-webkit-scrollbar {
-  width: 0;
+  height: 0px;
 }
 .site-navigation__item {
   padding: 5px;
 }
 .site-navigation__item.active {
-  border: 3px solid #B8FFEC;
+  border: 3px solid #b8ffec;
   border-radius: 5px;
   background-color: #fff;
+}
+
+.information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 24px 0 16px 0;
+  font-size: 14px;
+  padding-left: 16px;
+}
+.information__tablet {
+  display: none;
+}
+.information__button {
+  font-size: 16px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 16px 0;
+}
+.information__expand {
+  margin-right: 8px;
+}
+
+.entry {
+  margin-left: -16px;
+  width: calc(100% + 16px);
+}
+
+@media (min-width: 768px) {
+  .header__list-item-third {
+    display: flex;
+  }
+  .header__list-item-four {
+    display: flex;
+  }
+  .header__list-item-five {
+    display: flex;
+  }
+  .content {
+    margin: 24px 0 32px 0;
+  }
+  .site-navigation {
+    margin: 32px 0;
+    padding-left: 24px;
+  }
+  .information {
+    margin: 32px 25px 40px 24px;
+  }
 }
