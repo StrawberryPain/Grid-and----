@@ -184,3 +184,41 @@ body {
     border-radius: 6px;
   }
 }
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content__main-item {
+    margin-right: auto;
+    margin-top: 42px;
+    margin-bottom: 8px;
+    font-size: 28px;
+  }
+  .content__item {
+    display: inline;
+    margin-top: 50px;
+    margin-bottom: 16px;
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .content__image {
+    display: inline;
+    margin-top: 42px;
+    margin-bottom: 8px;
+    margin-right: 32px;
+  }
+  .site-navigation__item {
+    padding: 8px 20px;
+  }
+  .information__computer {
+    display: inline;
+  }
+}
