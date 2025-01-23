@@ -22,27 +22,28 @@ body {
 .header__list-item {
   margin: 20px 10px;
 }
-.header__list-item-second {
+.header__list-item:nth-child(2) {
   padding-right: 20px;
   position: relative;
 }
-.header__list-item-second::after {
+.header__list-item:nth-child(2)::after {
   content: "";
   background: #eaeaea;
   width: 2px;
   height: 35px;
-  left: 125px;
+  right: 0;
   border-radius: 1px;
   position: absolute;
-  margin-top: 3px;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.header__list-item-third {
+.header__list-item:nth-child(3) {
   display: none;
 }
-.header__list-item-four {
+.header__list-item:nth-child(4) {
   display: none;
 }
-.header__list-item-five {
+.header__list-item:nth-child(5) {
   display: none;
 }
 
@@ -109,15 +110,15 @@ body {
   display: none;
 }
 .information__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 16px;
   padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
   margin: 16px 0;
-}
-.information__expand {
-  margin-right: 8px;
 }
 
 .entry {
@@ -126,14 +127,35 @@ body {
 }
 
 @media (min-width: 768px) {
-  .header__list-item-third {
-    display: flex;
+  .header__list-item:nth-child(2) {
+    margin-right: auto;
+    padding-right: 0;
+    padding-left: 24px;
   }
-  .header__list-item-four {
-    display: flex;
+  .header__list-item:nth-child(2) {
+    left: 0;
   }
-  .header__list-item-five {
-    display: flex;
+  .header__list-item:nth-child(3) {
+    display: block;
+  }
+  .header__list-item:nth-child(4) {
+    display: block;
+  }
+  .header__list-item:nth-child(5) {
+    display: block;
+    padding-right: 20px;
+    position: relative;
+  }
+  .header__list-item:nth-child(5)::after {
+    content: "";
+    background: #eaeaea;
+    width: 2px;
+    height: 35px;
+    right: 0;
+    border-radius: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .content {
     margin: 24px 0 32px 0;
@@ -143,6 +165,22 @@ body {
     padding-left: 24px;
   }
   .information {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 48px;
     margin: 32px 25px 40px 24px;
+  }
+  .information__tablet {
+    display: inline;
+  }
+  .information__computer {
+    display: none;
+  }
+  .information__text {
+    display: block;
+  }
+  .entry {
+    border-radius: 6px;
   }
 }
