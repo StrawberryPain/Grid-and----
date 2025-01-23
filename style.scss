@@ -152,7 +152,7 @@ body {
       padding-left: 24px;
     }
 
-    &__list-item:nth-child(2) {
+    &__list-item:nth-child(2)::after {
       left: 0;
     }
 
