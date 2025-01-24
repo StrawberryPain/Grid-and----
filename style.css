@@ -25,6 +25,7 @@ body {
 .header__list-item:nth-child(2) {
   padding-right: 20px;
   position: relative;
+  margin-right: auto;
 }
 .header__list-item:nth-child(2)::after {
   content: "";
